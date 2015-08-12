@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The Pymviewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base target='_parent'>
+  <script>
+    WebFontConfig = {
+      google: { families: [ 'Courgette::latin' ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+  <!-- build:css styles/main.min.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+<body>
+
+<header class="banner">
+  <h1 class="banner__title">The Pymviewer</h1>
+</header>
+
+<form class="url-form" action="" method="GET">
+  <label class="url-form__label" for="url-input">Please provide an embed to preview</label>
+  <div class="url-form__input-group">
+    <input class="url-form__input" type="url" name="url" id="url-input">
+    <button class="url-form__button" type="submit">Go</button>
+  </div>
+</form>
+
+<div id="resizers" class="resizers">
+  <button class="resizers__button resizers__button--active" value="320">320px</button>
+  <button class="resizers__button" value="480">480px</button>
+  <button class="resizers__button" value="640">640px</button>
+  <button class="resizers__button" value="100%">Fluid (100%)</button>
+</div>
+
+<div id="stage" class="stage"></div>
+
+<!-- build:js scripts/main.min.js -->
+<script src="/node_modules/pym.js/dist/pym.js"></script>
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>

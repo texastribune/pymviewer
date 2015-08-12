@@ -1,0 +1,55 @@
+{
+  "private": true,
+  "config": {
+    "s3_bucket": "graphics.texastribune.org",
+    "slug": "previewer"
+  },
+  "devDependencies": {
+    "babel-core": "^5.7.4",
+    "browser-sync": "^2.8.0",
+    "chalk": "^1.1.0",
+    "del": "^1.2.0",
+    "googleapis": "^2.1.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-cache": "^0.2.10",
+    "gulp-csso": "^1.0.0",
+    "gulp-gzip": "^1.2.0",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-rev": "^5.1.0",
+    "gulp-rev-replace": "^0.4.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-size": "^1.2.3",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-useref": "^1.2.0",
+    "inquirer": "^0.9.0",
+    "jshint-stylish": "^2.0.1",
+    "marked": "^0.3.3",
+    "nconf": "^0.7.1",
+    "nunjucks": "^1.3.4",
+    "open": "0.0.5",
+    "request": "^2.59.0",
+    "run-sequence": "^1.1.2",
+    "untildify": "^2.1.0",
+    "vinyl-map": "^1.0.1",
+    "xlsx": "^0.8.0"
+  },
+  "dependencies": {
+    "pym.js": "^0.4.5",
+    "susy": "^2.2.5"
+  },
+  "scripts": {
+    "spreadsheet/authorize": "./bin/authorize.js",
+    "spreadsheet/fetch": "./bin/fetch_spreadsheet.js",
+    "spreadsheet/edit": "./bin/edit_spreadsheet.js",
+    "assets/push": "./bin/push_assets_to_s3.sh",
+    "assets/pull": "./bin/pull_assets_from_s3.sh",
+    "deploy": "./bin/deploy.sh && npm run assets/push",
+    "serve": "gulp serve",
+    "build": "gulp build"
+  }
+}
