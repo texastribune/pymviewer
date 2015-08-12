@@ -131,8 +131,38 @@ html {
 
 .stage {
   border: 1px dashed rgb(204, 41, 54);
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   margin-left: auto;
   margin-right: auto;
   width: 320px;
+}
+
+.footer {
+  background-color: rgb(8, 65, 92);
+  bottom: 0;
+  padding: .5rem 1rem;
+  position: fixed;
+  width: 100%;
+
+  &__credit {
+    color: rgb(181, 255, 225);
+    float: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: .875rem;
+    font-weight: 300;
+    letter-spacing: .1em;
+  }
+
+  &__repo {
+    color: rgb(181, 255, 225);
+    float: right;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: .875rem;
+    font-weight: 300;
+    letter-spacing: .1em;
+  }
+
+  &__link {
+    color: rgb(181, 255, 225);
+  }
 }
