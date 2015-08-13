@@ -1,4 +1,4 @@
-# The PymViewer
+# PymViewer
 
 A single-page site for testing [Pym.js](http://blog.apps.npr.org/pym.js/) embeds. Built using the Texas Tribune [News Apps Graphic Kit](https://github.com/texastribune/newsapps-graphic-kit).
 
